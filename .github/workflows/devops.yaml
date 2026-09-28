@@ -1,0 +1,24 @@
+# this is a sample GitHub Actions workflow for a GitOps pipeline get from gpt , not own written 
+name: My GitOps Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Show Message
+        run: echo "Hello GitOps"
+
+      - name: Build
+        run: echo "Building application"
+
+      - name: Deploy
+        run: echo "Deploying application"
